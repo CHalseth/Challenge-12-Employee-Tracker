@@ -11,7 +11,7 @@ const {
 const { 
     addEmployee, 
     addRole, 
-    addDepartment 
+    addDepartment
 } = require('./lib/add');
 
 const { 
@@ -21,11 +21,28 @@ const {
 
 const {
     getEmployee,
-    getAllroles,
+    getAllRoles,
     getDepartment,
     getManagerEmployees,
     getByDepartment 
 } = require('./lib/get');
+
+const query_Array = [
+    'View All Employees',
+    'View Employees By Manager',
+    'View Employees by Department',
+    'Add Employee',
+    'Update Employee Role',
+    'Update Employee Manager',
+    'Delete An Employee',
+    'View All Roles',
+    'Add Role',
+    'Delete a Role',
+    'View All Departments',
+    'Add Department',
+    'Delete a Department',
+    'Quit',
+]
 
 const initialQuery = () => {
     inquirer.prompt([{
