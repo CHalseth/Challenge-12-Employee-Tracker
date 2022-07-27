@@ -53,7 +53,7 @@ const initialQuery = () => {
         },
     ])
     .then((answer) => {
-        if (answer.query_type === 'Vioew All Employees') {
+        if (answer.query_type === 'View All Employees') {
             getEmployee(initialQuery);
         }
         if (answer.query_type === "View Employees By Manager") {
@@ -72,12 +72,12 @@ const initialQuery = () => {
             deleteEmployee(getEmployee, initialQuery)
         }
         if (answer.query_type === 'View All Roles') {
-            getAllroles(initialQuery);
+            getAllRoles(initialQuery);
         }
         if (answer.query_type === 'Add Role') {
             addRole(getAllRoles, initialQuery);
         }
-        if (answer.query_type === 'Delete Role') {
+        if (answer.query_type === 'Delete a Role') {
             deleteRole(getAllRoles, initialQuery);
         }
         if (answer.query_type === 'View All Departments') {
@@ -86,8 +86,11 @@ const initialQuery = () => {
         if (answer.query_type === 'Add Department') {
             addDepartment(getDepartment, initialQuery);
         }
-        if (answer.query_type === 'Delete Department') {
+        if (answer.query_type === 'Delete a Department') {
             deleteDepartment(getDepartment, initialQuery);
+        }
+        if (answer.query_type === 'Update Employee Role') {
+            updateEmployee(getEmployee, initialQuery);
         }
         if (answer.query_type === 'Quit') {
             process.exit();
